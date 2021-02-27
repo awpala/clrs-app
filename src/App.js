@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import rootReducer from './reducers';
 import InsertionSort from './pseudocode/p018InsertionSort/InsertionSort';
 import DiagramInsertionSort from './diagrams/d018InsertionSort/DiagramInsertionSort';
+import MemoryInsertionSort from './memory/m018InsertionSort/MemoryInsertionSort';
 import Controls from './controls/Controls';
 import './App.css';
 import './App.scss';
@@ -19,6 +20,7 @@ const App = () => {
       <div className="App">
         <InsertionSort />
         <DiagramInsertionSort />
+        <MemoryInsertionSort />
         <Controls />
       </div>
     </Provider>

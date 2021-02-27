@@ -1,9 +1,9 @@
 import React from 'react';
-import { SortArrayElement } from '../../assets/svgs';
+import { SortArrayElement } from '../../assets/svgs/diagrams';
 
-const SortArray = ({ array, aboveValue, aboveContent, belowValue, belowContent }) => (
+const SortArray = ({ A, aboveValue, aboveContent, belowValue, belowContent }) => (
   <div className="sort-array">
-    {array.map((element, index) => (
+    {A.map((element, index) => (
         <div
           key={index}
           className="sort-array-element"
