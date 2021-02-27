@@ -1,4 +1,5 @@
 import React from 'react';
+import { SortArrayElement } from '../../assets/svgs';
 
 const SortArray = ({ array, aboveValue, aboveContent, belowValue, belowContent }) => (
   <div className="sort-array">
@@ -7,9 +8,11 @@ const SortArray = ({ array, aboveValue, aboveContent, belowValue, belowContent }
           key={index}
           className="sort-array-element"
         >
-          <div className="sort-array-element-above">{(index + 1 === aboveValue) ? aboveContent : null}</div>
-          <div className="sort-array-element-value">{element}</div>
-          <div className="sort-array-element-below">{(index + 1 === belowValue) ? belowContent : null}</div>
+          <SortArrayElement
+            value={element}
+            above={(index + 1 === aboveValue) ? aboveContent : null}
+            below={(index + 1 === belowValue) ? belowContent : null}
+          />
         </div>
       )
     )}
