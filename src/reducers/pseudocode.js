@@ -58,10 +58,11 @@ export default function pseudocodeReducer(state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
-    case SET_TOTAL_SEQUENCES: return { ...state, ...payload };
-    case SET_CURRENT_SEQUENCE: return { ...state, ...payload };
-    case INCREMENT_CURRENT_SEQUENCE: return { ...state, ...payload };
-    case DECREMENT_CURRENT_SEQUENCE: return { ...state, ...payload };
+    case SET_TOTAL_SEQUENCES:
+    case SET_CURRENT_SEQUENCE:
+    case INCREMENT_CURRENT_SEQUENCE:
+    case DECREMENT_CURRENT_SEQUENCE:
+      return { ...state, ...payload };
     default: return { ...state };
   }
 }
