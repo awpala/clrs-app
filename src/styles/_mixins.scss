@@ -1,0 +1,20 @@
+// Flexbox container generator
+@mixin flexer(
+  $disp: flex,
+  $dir: null,
+  $wrap: null,
+  $just: null,
+  $grow: null,
+  $ai: null,
+  $ac: null,
+  $as: null
+) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  flex-grow: $grow;
+  align-items: $ai;
+  align-content: $ac;
+  align-self: $as;
+}
