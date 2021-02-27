@@ -3,6 +3,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers';
 import InsertionSort from './pseudocode/p018InsertionSort/InsertionSort';
+import DiagramInsertionSort from './diagrams/d018InsertionSort/DiagramInsertionSort';
 import Controls from './controls/Controls';
 import './App.css';
 import './App.scss';
@@ -17,6 +18,7 @@ const App = () => {
     <Provider store={store}>
       <div className="App">
         <InsertionSort />
+        <DiagramInsertionSort />
         <Controls />
       </div>
     </Provider>

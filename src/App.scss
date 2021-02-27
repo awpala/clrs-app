@@ -1,10 +1,9 @@
+@import "./styles/mixins";
+
 $code-indent: 30px;
 
 .App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flexer($dir: column, $just: center, $ai: center);
 
   .pseudocode {
     display: flex;

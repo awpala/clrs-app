@@ -1,0 +1,33 @@
+@import "../../styles/mixins";
+
+.diagram-insertion-sort {
+  @include flexer($dir: column, $just: center, $ai: center);
+  height: 250px;
+
+  &-variables {
+    height: 60px;
+  }
+
+  .sort-array {
+    height: 150px;
+    @include flexer($dir: row);
+  
+    &-element {
+      @include flexer($dir: column, $just: center, $ai: center);
+  
+      &-above,
+      &-below {
+        @include flexer($dir: column, $just: center, $ai: center);
+        width: 30px;
+        height: 30px;
+      }
+  
+      &-value {
+        @include flexer($ai: center, $just: center);
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+      }
+    }
+  }
+}
