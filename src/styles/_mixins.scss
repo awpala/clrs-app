@@ -1,20 +1,37 @@
-// Flexbox container generator
+/* 
+  Flexbox style rules generator
+  reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+*/
 @mixin flexer(
+  // flex container (parent) properties
   $disp: flex,
   $dir: null,
   $wrap: null,
+  $flow: null,
   $just: null,
-  $grow: null,
   $ai: null,
   $ac: null,
+  // flex items (children) properties
+  $order: null,
+  $grow: null,
+  $shrink: null,
+  $basis: null,
+  $flex: null,
   $as: null
 ) {
+  // flex container (parent) properties
   display: $disp;
   flex-direction: $dir;
   flex-wrap: $wrap;
+  $flex-flow: $flow;
   justify-content: $just;
-  flex-grow: $grow;
   align-items: $ai;
   align-content: $ac;
+  // flex items (children) properties
+  order: $order;
+  flex-grow: $grow;
+  flex-shrink: $shrink;
+  flex-basis: $basis;
+  flex: $flex;
   align-self: $as;
 }
