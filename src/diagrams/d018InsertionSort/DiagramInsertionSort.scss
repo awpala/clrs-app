@@ -1,11 +1,22 @@
 @import "../../styles/mixins";
 
 .diagram-insertion-sort {
-  @include flexer($dir: column, $just: center, $ai: center);
-  height: 250px;
+  @include flexer($dir: row, $just: space-between, $ai: center);
+  height: 200px;
+  width: 400px;
 
   &-variables {
     height: 60px;
+    padding-top: 20px;
+  }
+
+  .array {
+    width: 320px;
+    @include flexer($dir: row, $just: space-around, $ai: center);
+  }
+
+  .array-name {
+    padding-top: 20px;
   }
 
   .sort-array {

@@ -7,11 +7,11 @@ const InsertionSort = ({ setTotalSequences, currentSequence }) => {
 
   useEffect(() => {
     setTotalSequences(totalSequencesInsertionSort);
-  }, [])
+  }, [setTotalSequences])
 
   return (
     <div className="pseudocode">
-      <h1 className="pc-title">Insertion-Sort(A)</h1>
+      <h2 className="pc-title">Insertion-Sort(A)</h2>
         <p
           className={`pc-level0${(
             currentSequence === 1
