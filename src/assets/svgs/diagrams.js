@@ -1,5 +1,5 @@
 import React from 'react';
-import { black } from '../../constants';
+import { black } from '../../utilities/constants';
 
 export const SortArrayElement = ({
   value,

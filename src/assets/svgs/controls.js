@@ -1,5 +1,5 @@
 import React from 'react';
-import { black, gray, _01, _05, _1, _5, _10, _50, _100 } from '../../constants';
+import { black, gray, _01, _05, _1, _5, _10, _50, _100 } from '../../utilities/constants';
 
 export const PlaybackButton = ({
   isPlaying = false,

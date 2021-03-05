@@ -1,4 +1,4 @@
-import { NIL } from '../constants';
+import { NIL } from '../utilities/constants';
 
 export const totalSequencesInsertionSort = 53;
 

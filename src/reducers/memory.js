@@ -1,4 +1,4 @@
-import { black, red, green, blue, purple, orange } from '../constants';
+import { black, red, green, blue, purple, orange } from '../utilities/constants';
 
 const initialState = {
   vars: null,
