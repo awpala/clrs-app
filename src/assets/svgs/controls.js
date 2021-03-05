@@ -1,18 +1,5 @@
 import React from 'react';
-
-// colors
-const black = 'black';
-const gray = '#999999';
-
-// playback speeds
-const sec = 1000;
-const _01 = sec / 0.1;
-const _05 = sec / 0.5;
-const _1 = sec / 1;
-const _5 = sec / 5;
-const _10 = sec / 10;
-const _50 = sec /50;
-const _100 = sec / 100;
+import { black, gray, _01, _05, _1, _5, _10, _50, _100 } from '../../constants';
 
 export const PlaybackButton = ({
   isPlaying = false,
