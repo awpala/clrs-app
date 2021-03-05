@@ -22,7 +22,7 @@ const Controls = ({
   setPlaybackSpeed,
 }) => {
   useEffect(() => {
-    if (isPlaying && (currentSequence <= totalSequences)) {
+    if (isPlaying && (currentSequence < totalSequences)) {
       setTimeout(() => {
         incrementCurrentSequence(currentSequence, totalSequences);
       }, currentSpeed)
@@ -34,13 +34,6 @@ const Controls = ({
       setToPause();
     }
   }, [currentSequence, totalSequences, setToPause])
-
-  // TO-D0: replace below with third SVG icon state: (1) play, (2) pause, (3) restart
-  // useEffect(() => {
-  //   if (!isPlaying && currentSequence === totalSequences) {
-  //     setCurrentSequence(1);
-  //   }
-  // }, [isPlaying, currentSequence, totalSequences, setCurrentSequence])
 
   const resetPlay = () => {
     if (currentSequence === totalSequences) {
