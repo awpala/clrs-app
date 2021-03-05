@@ -1,12 +1,5 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { 
-  setCurrentSequence,
-  decrementCurrentSequence,
-  incrementCurrentSequence
-} from '../reducers/pseudocode';
-import { setToPlay, setToPause, setPlaybackSpeed } from '../reducers/controls';
-import { PlaybackButton } from '../assets/svgs/controls';
+import { PlaybackButton } from '../../assets/svgs/controls';
 import './Controls.scss';
 
 const Controls = ({
@@ -65,21 +58,4 @@ const Controls = ({
   );
 }
 
-const mapStateToProps = state => ({
-  totalSequences: state.pseudocode.totalSequences,
-  currentSequence: state.pseudocode.currentSequence,
-  isPlaying: state.controls.isPlaying,
-  currentSpeed: state.controls.currentSpeed,
-})
-
-const mapDispatchToProps = dispatch => ({
-  setCurrentSequence: (currentSequence) => dispatch(setCurrentSequence(currentSequence)),
-  decrementCurrentSequence: (currentSequence) => dispatch(decrementCurrentSequence(currentSequence)),
-  incrementCurrentSequence: (currentSequence, totalSequences) => dispatch(incrementCurrentSequence(currentSequence, totalSequences)),
-  setToPlay: () => dispatch(setToPlay()),
-  setToPause: () => dispatch(setToPause()),
-  setPlaybackSpeed: (newSpeed) => dispatch(setPlaybackSpeed(newSpeed)),
-})
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Controls)
+export default Controls;

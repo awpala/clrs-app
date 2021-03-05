@@ -1,0 +1,15 @@
+@import "../../styles//mixins";
+
+.main {
+  width: 100%;
+  height: calc(100vw - 18px);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 40vh 35vh 10vh;
+  justify-items: center;
+  align-items: start;
+  .controls {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+}

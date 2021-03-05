@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { setTotalSequences } from '../../reducers/pseudocode';
 
 const InsertionSort = ({ setTotalSequences, currentSequence }) => {
   const totalSequencesInsertionSort = 53;
@@ -102,12 +100,4 @@ const InsertionSort = ({ setTotalSequences, currentSequence }) => {
   );
 };
 
-const mapStateToProps = state => ({
-  currentSequence: state.pseudocode.currentSequence,
-});
-
-const mapDispatchToProps = dispatch => ({
-  setTotalSequences: (totalSequences) => dispatch(setTotalSequences(totalSequences)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(InsertionSort)
+export default InsertionSort;

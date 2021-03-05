@@ -2,11 +2,8 @@ import React from 'react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers';
-import InsertionSort from './pseudocode/p018InsertionSort/InsertionSort';
-import DiagramInsertionSort from './diagrams/d018InsertionSort/DiagramInsertionSort';
-import MemoryInsertionSort from './memory/m018InsertionSort/MemoryInsertionSort';
-import Controls from './controls/Controls';
-import './App.css';
+import Header from './components/Header';
+import Main from './views/Main';
 import './App.scss';
 
 const store = createStore(
@@ -18,10 +15,8 @@ const App = () => {
   return (
     <Provider store={store}>
       <div className="App">
-        <InsertionSort />
-        <DiagramInsertionSort />
-        <MemoryInsertionSort />
-        <Controls />
+        <Header />
+        <Main />
       </div>
     </Provider>
   );

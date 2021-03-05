@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { StackFrame } from '../../assets/svgs/memory';
 
 const MemoryInsertionSort = ({ vars, dataStructures, currentStackFrame, currentStackFrameColor }) => (
@@ -24,11 +23,4 @@ const MemoryInsertionSort = ({ vars, dataStructures, currentStackFrame, currentS
   </div>
 );
 
-const mapStateToProps = state => ({
-  vars: state.memory.vars,
-  dataStructures: state.memory.dataStructures,
-  currentStackFrame: state.memory.currentStackFrame,
-  currentStackFrameColor: state.memory.currentStackFrameColor,
-});
-
-export default connect(mapStateToProps)(MemoryInsertionSort);
+export default MemoryInsertionSort;

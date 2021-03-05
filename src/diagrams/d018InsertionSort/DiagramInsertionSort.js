@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
 import { InsertionSortStates } from './DiagramStates';
-import { setVars, setDataStructures, setStackFrame, setStackFrameColor } from '../../reducers/memory';
-import SortArray from '../../objects/SortArray/SortArray';
+import SortArray from '../../objects/SortArray';
 import './DiagramInsertionSort.scss';
 
 const DiagramInsertionSort = ({ 
@@ -47,21 +45,9 @@ const DiagramInsertionSort = ({
       </div>
       <div className="diagram-insertion-sort-variables">
         <p>key: {InsertionSortStates[currentSequence].key ? InsertionSortStates[currentSequence].key : 'NIL'}</p>
-        {/* {(InsertionSortStates[currentSequence].i === 0) ? <p>i = 0</p> : null} */}
       </div>
     </div>
   );
 }
 
-const mapStateToProps = state => ({
-  currentSequence: state.pseudocode.currentSequence,
-});
-
-const mapDispatchToProps = dispatch => ({
-  setVars: (vars) => dispatch(setVars(vars)),
-  setDataStructures: (dataStructures) => dispatch(setDataStructures(dataStructures)),
-  setStackFrame: (currentStackFrame) => dispatch(setStackFrame(currentStackFrame)),
-  setStackFrameColor: (currentStackFrame) => dispatch(setStackFrameColor(currentStackFrame)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(DiagramInsertionSort);
+export default DiagramInsertionSort;
