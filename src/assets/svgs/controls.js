@@ -29,7 +29,7 @@ export const PlaybackButton = ({
 
       <g onClick={() => setPlaybackSpeed(_01)}>
         <rect x="0" y="35" width="20" height="10" fill="none" stroke="none" pointerEvents="all"/>
-        <ellipse cx="24.5" cy="40" rx="1.5" ry="1.5" fill={currentSpeed === _01 ? black : "none"} stroke={currentSpeed === _01 ? black : gray} pointerEvents="all"/>
+        <ellipse cx="24.5" cy="40" rx="1.5" ry="1.5" fill={currentSpeed <= _01 ? black : "none"} stroke={currentSpeed <= _01 ? black : gray} pointerEvents="all"/>
         <g transform="translate(-0.5 -0.5)">
           <text x="10" y="44" fill={currentSpeed === _01 ? black : gray} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">0.1</text>
         </g>
@@ -37,7 +37,7 @@ export const PlaybackButton = ({
 
       <g onClick={() => setPlaybackSpeed(_05)}>
         <rect x="6" y="14" width="20" height="10" fill="none" stroke="none" pointerEvents="all"/>
-        <ellipse cx="30.5" cy="25.5" rx="1.5" ry="1.5" fill={currentSpeed === _05 ? black : "none"} stroke={currentSpeed === _05 ? black : gray} pointerEvents="all"/>
+        <ellipse cx="30.5" cy="25.5" rx="1.5" ry="1.5" fill={currentSpeed <= _05 ? black : "none"} stroke={currentSpeed <= _05 ? black : gray} pointerEvents="all"/>
         <g transform="translate(-0.5 -0.5)">
           <text x="16" y="23" fill={currentSpeed === _05 ? black : gray} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">0.5</text>
         </g>
@@ -45,7 +45,7 @@ export const PlaybackButton = ({
 
       <g onClick={() => setPlaybackSpeed(_1)}>
         <rect x="35" y="2" width="20" height="10" fill="none" stroke="none" pointerEvents="all"/>
-        <ellipse cx="45" cy="19" rx="1.5" ry="1.5" fill={currentSpeed === _1 ? black : "none"} stroke={currentSpeed === _1 ? black : gray} pointerEvents="all"/>
+        <ellipse cx="45" cy="19" rx="1.5" ry="1.5" fill={currentSpeed <= _1 ? black : "none"} stroke={currentSpeed <= _1 ? black : gray} pointerEvents="all"/>
         <g transform="translate(-0.5 -0.5)">
           <text x="45" y="11" fill={currentSpeed === _1 ? black : gray} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">1</text>
         </g>
@@ -53,7 +53,7 @@ export const PlaybackButton = ({
 
       <g onClick={() => setPlaybackSpeed(_5)}>
         <rect x="64" y="14" width="14" height="10" fill="none" stroke="none" pointerEvents="all"/>
-        <ellipse cx="59.5" cy="25.5" rx="1.5" ry="1.5" fill={currentSpeed === _5 ? black : "none"} stroke={currentSpeed === _5 ? black : gray} pointerEvents="all"/>
+        <ellipse cx="59.5" cy="25.5" rx="1.5" ry="1.5" fill={currentSpeed <= _5 ? black : "none"} stroke={currentSpeed <= _5 ? black : gray} pointerEvents="all"/>
         <g transform="translate(-0.5 -0.5)">
           <text x="71" y="23" fill={currentSpeed === _5 ? black : gray} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">5</text>
         </g>
@@ -61,7 +61,7 @@ export const PlaybackButton = ({
 
       <g onClick={() => setPlaybackSpeed(_10)}>
         <rect x="72" y="35" width="14" height="10" fill="none" stroke="none" pointerEvents="all"/>
-        <ellipse cx="65.5" cy="40" rx="1.5" ry="1.5" fill={currentSpeed === _10 ? black : "none"} stroke={currentSpeed === _10 ? black : gray} pointerEvents="all"/>
+        <ellipse cx="65.5" cy="40" rx="1.5" ry="1.5" fill={currentSpeed <= _10 ? black : "none"} stroke={currentSpeed <= _10 ? black : gray} pointerEvents="all"/>
         <g transform="translate(-0.5 -0.5)">
           <text x="79" y="44" fill={currentSpeed === _10 ? black : gray} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">10</text>
         </g>
@@ -69,17 +69,17 @@ export const PlaybackButton = ({
 
       <g onClick={() => setPlaybackSpeed(_50)}>
         <rect x="65" y="56" width="14" height="10" fill="none" stroke="none" pointerEvents="all"/>
-        <ellipse cx="59.5" cy="54.5" rx="1.5" ry="1.5" fill={currentSpeed === _50 ? black : "none"} stroke={currentSpeed === _50 ? black : gray} pointerEvents="all"/>
+        <ellipse cx="59.5" cy="54.5" rx="1.5" ry="1.5" fill={currentSpeed <= _50 ? black : "none"} stroke={currentSpeed <= _50 ? black : gray} pointerEvents="all"/>
         <g transform="translate(-0.5 -0.5)">
-          <text x="72" y="65" fill={currentSpeed === _50 ? black : gray} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">50</text>
+          <text x="73" y="65" fill={currentSpeed === _50 ? black : gray} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">50</text>
         </g>
       </g>
 
       <g onClick={() => setPlaybackSpeed(_100)}>
         <rect x="35" y="66" width="20" height="10" fill="none" stroke="none" pointerEvents="all"/>
-        <ellipse cx="45" cy="61" rx="1.5" ry="1.5" fill={currentSpeed === _100 ? black : "none"} stroke={currentSpeed === _100 ? black : gray} pointerEvents="all"/>
+        <ellipse cx="45" cy="61" rx="1.5" ry="1.5" fill={currentSpeed <= _100 ? black : "none"} stroke={currentSpeed <= _100 ? black : gray} pointerEvents="all"/>
         <g transform="translate(-0.5 -0.5)">
-          <text x="45" y="75" fill={currentSpeed === _100 ? black : gray} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">100</text>
+          <text x="45" y="78" fill={currentSpeed === _100 ? black : gray} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">100</text>
         </g>
       </g>
 
