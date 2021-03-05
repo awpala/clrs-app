@@ -17,9 +17,9 @@ const DiagramInsertionSort = ({
   }, [setStackFrame, setStackFrameColor]);
 
   useEffect(() => {
-    const i = (InsertionSortStates[currentSequence].i || InsertionSortStates[currentSequence].i === 0) ? InsertionSortStates[currentSequence].i : 'NIL';
-    const j = (InsertionSortStates[currentSequence].j || InsertionSortStates[currentSequence].j === 0) ? InsertionSortStates[currentSequence].j : 'NIL';
-    const key = (InsertionSortStates[currentSequence].key || InsertionSortStates[currentSequence].key === 0) ? InsertionSortStates[currentSequence].key : 'NIL';
+    const i = InsertionSortStates[currentSequence].i;
+    const j = InsertionSortStates[currentSequence].j;
+    const key = InsertionSortStates[currentSequence].key;
 
     const vars = { i, j, key, };
 
@@ -45,7 +45,7 @@ const DiagramInsertionSort = ({
         />
       </div>
       <div className="diagram-insertion-sort-variables">
-        <p>key: {InsertionSortStates[currentSequence].key ? InsertionSortStates[currentSequence].key : 'NIL'}</p>
+        <p>key: {InsertionSortStates[currentSequence].key}</p>
       </div>
     </div>
   );

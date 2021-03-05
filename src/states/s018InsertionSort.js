@@ -1,15 +1,17 @@
+import { NIL } from '../constants';
+
 export const totalSequencesInsertionSort = 53;
 
 export const InsertionSortStates = {
   1: {
     A: [5, 2, 4, 6, 1, 3],
-    i: null,
+    i: NIL,
     j: 2,
-    key: null,
+    key: NIL,
   },
   2: {
     A: [5, 2, 4, 6, 1, 3],
-    i: null,
+    i: NIL,
     j: 2,
     key: 2,
   },

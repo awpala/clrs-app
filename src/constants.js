@@ -1,3 +1,6 @@
+// pseudocode
+export const NIL = 'NIL';
+
 // colors
 export const black = 'black';
 export const gray = '#999999';
