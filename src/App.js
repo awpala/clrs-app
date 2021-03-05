@@ -5,6 +5,7 @@ import rootReducer from './reducers';
 import Header from './components/Header';
 import Main from './views/Main';
 import './App.scss';
+import './pseudocode/pseudocode.scss';
 
 const store = createStore(
   rootReducer,

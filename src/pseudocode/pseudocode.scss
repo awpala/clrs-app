@@ -1,0 +1,39 @@
+@import "../styles/mixins";
+
+$code-indent: 30px;
+
+.pseudocode {
+  @include flexer($dir: column, $ai: flex-start, $just: flex-start);
+
+  .pc-keyword {
+    font-weight: bold;
+  }
+  
+  .pc-variable {
+    font-style: italic;
+  }
+
+  .pc-current-sequence {
+    color: red;
+  }
+
+  .pc-level0,
+  .pc-level1,
+  .pc-level2,
+  .pc-level3 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .pc-level0 {
+    margin-left: $code-indent * 0;
+  }
+
+  .pc-level1 {
+    margin-left: $code-indent * 1;
+  }
+
+  .pc-level2 {
+    margin-left: $code-indent * 2;
+  }
+}
