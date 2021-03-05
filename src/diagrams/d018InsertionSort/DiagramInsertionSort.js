@@ -37,6 +37,7 @@ const DiagramInsertionSort = ({
         <p className="array-name">A</p>
         <SortArray
           A={InsertionSortStates[currentSequence].A}
+          isOutOfBoundsZero
           aboveValue={InsertionSortStates[currentSequence].j}
           aboveContent="j"
           belowValue={InsertionSortStates[currentSequence].i}

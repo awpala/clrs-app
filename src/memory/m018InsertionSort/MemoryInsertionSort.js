@@ -5,7 +5,7 @@ const MemoryInsertionSort = ({
   vars,
   dataStructures,
   currentStackFrame,
-  currentStackFrameColor ,
+  currentStackFrameColor,
 }) => (
   <div className="memory-model">
     {(vars && dataStructures)
