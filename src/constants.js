@@ -4,6 +4,11 @@ export const NIL = 'NIL';
 // colors
 export const black = 'black';
 export const gray = '#999999';
+export const red = 'red';
+export const green = 'green';
+export const blue = 'blue';
+export const purple = 'purple';
+export const orange = 'orange';
 
 // playback speeds (sequences/second)
 const sec = 1000;

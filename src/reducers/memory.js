@@ -1,3 +1,5 @@
+import { black, red, green, blue, purple, orange } from '../constants';
+
 const initialState = {
   vars: null,
   dataStructures: null,
@@ -36,22 +38,22 @@ export const setStackFrameColor = (currentStackFrame) => {
 
   switch (currentStackFrame) {
     case 1:
-      currentStackFrameColor = 'red';
+      currentStackFrameColor = red;
       break;
     case 2:
-      currentStackFrameColor = 'green';
+      currentStackFrameColor = green;
       break;
     case 3:
-      currentStackFrameColor = 'blue';
+      currentStackFrameColor = blue;
       break;
     case 4:
-      currentStackFrameColor = 'purple';
+      currentStackFrameColor = purple;
       break;
     case 5:
-      currentStackFrameColor = 'orange';
+      currentStackFrameColor = orange;
       break;
     default:
-      currentStackFrameColor = 'black';
+      currentStackFrameColor = black;
   }
 
   return ({
