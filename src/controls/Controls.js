@@ -44,8 +44,8 @@ const Controls = ({
 
   const resetPlay = () => {
     if (currentSequence === totalSequences) {
-      setCurrentSequence(1);
       setToPlay();
+      setCurrentSequence(1);
     }
   }
 

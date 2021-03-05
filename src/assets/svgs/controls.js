@@ -83,33 +83,32 @@ export const PlaybackButton = ({
         </g>
       </g>
 
-      {!isPlaying && !isCompleted
-        ? (
+      {(!isPlaying && !isCompleted)
+        && (
           <g onClick={() => setToPlay()}>
             <rect x="33" y="28" width="24" height="24" fill="none" stroke={black} pointerEvents="all"/>
             <path d="M 38 31 L 53 40 L 38 49 Z" fill={black} stroke={black} strokeMiterlimit="10" pointerEvents="all"/>
           </g>
-        ) : null
+        )
       }
-      {isPlaying && !isCompleted
-        ? (
+      {(isPlaying && !isCompleted)
+        && (
           <g onClick={() => setToPause()}>
             <rect x="33" y="28" width="24" height="24" fill="none" stroke={black} pointerEvents="all"/>
             <rect x="38" y="31" width="4" height="18" fill={black} stroke={black} pointerEvents="all"/>
             <rect x="48" y="31" width="4" height="18" fill={black} stroke={black} pointerEvents="all"/>
           </g>
-        ) : null
+        )
       }
-      {!isPlaying && isCompleted
-        ? (
+      {(!isPlaying && isCompleted)
+        && (
           <g onClick={() => resetPlay()}>
             <rect x="33" y="28" width="24" height="24" fill="none" stroke={black} pointerEvents="all"/>
             <path d="M 54 40.94 C 54 44 51.93 46.76 48.75 47.92 C 45.58 49.09 41.92 48.45 39.49 46.29 C 37.06 44.13 36.33 40.88 37.65 38.05 C 38.96 35.23 42.06 33.39 45.5 33.39" fill="none" stroke={black} strokeWidth="2" strokeMiterlimit="10" pointerEvents="all"/>
             <path d="M 45.5 31.5 L 48.69 33.39 L 45.5 35.28 Z" fill={black} stroke={black} strokeWidth="2" strokeMiterlimit="10" pointerEvents="all"/>
           </g>
-        ) : null
+        )
       }
-
     </g>
   </svg>
 );
