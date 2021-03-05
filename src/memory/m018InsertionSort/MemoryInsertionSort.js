@@ -1,7 +1,12 @@
 import React from 'react';
 import { StackFrame } from '../../assets/svgs/memory';
 
-const MemoryInsertionSort = ({ vars, dataStructures, currentStackFrame, currentStackFrameColor }) => (
+const MemoryInsertionSort = ({
+  vars,
+  dataStructures,
+  currentStackFrame,
+  currentStackFrameColor ,
+}) => (
   <div className="memory-model">
     {(vars && dataStructures)
       ? (

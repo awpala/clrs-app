@@ -1,7 +1,13 @@
 import React from 'react';
 import { SortArrayElement } from '../../assets/svgs/diagrams';
 
-const SortArray = ({ A, aboveValue, aboveContent, belowValue, belowContent }) => (
+const SortArray = ({
+  A,
+  aboveValue,
+  aboveContent,
+  belowValue,
+  belowContent,
+}) => (
   <div className="sort-array">
     <div className="sort-array-element">
       <SortArrayElement
