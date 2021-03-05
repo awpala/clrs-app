@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
+import { totalSequencesInsertionSort } from '../../states/s018InsertionSort';
 
 const InsertionSort = ({ setTotalSequences, currentSequence }) => {
-  const totalSequencesInsertionSort = 53;
-
   useEffect(() => {
     setTotalSequences(totalSequencesInsertionSort);
   }, [setTotalSequences])

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { InsertionSortStates } from './DiagramStates';
+import { InsertionSortStates } from '../../states/s018InsertionSort';
 import SortArray from '../../objects/SortArray';
 import './DiagramInsertionSort.scss';
 

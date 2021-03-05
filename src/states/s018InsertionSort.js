@@ -1,4 +1,6 @@
-const InsertionSortStates = {
+export const totalSequencesInsertionSort = 53;
+
+export const InsertionSortStates = {
   1: {
     A: [5, 2, 4, 6, 1, 3],
     i: null,
@@ -318,7 +320,3 @@ const InsertionSortStates = {
     key: 3,
   },
 };
-
-module.exports = {
-  InsertionSortStates,
-}
