@@ -1,0 +1,16 @@
+@import "../styles/mixins";
+
+.controls {
+  &-panel {
+    width: 320px;
+    @include flexer($dir: row, $ai: center, $just: space-between);
+  }
+
+  &-buttons {
+    @include flexer($dir: row, $ai: center, $just: center);
+
+    button {
+      width: 50px;
+    }
+  }
+}

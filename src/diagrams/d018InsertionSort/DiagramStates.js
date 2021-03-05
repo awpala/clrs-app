@@ -311,6 +311,12 @@ const InsertionSortStates = {
     j: 6,
     key: 3,
   },
+  53: {
+    A: [1, 2, 3, 4, 5, 6],
+    i: 2,
+    j: 7,
+    key: 3,
+  },
 };
 
 module.exports = {

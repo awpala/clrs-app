@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { setTotalSequences } from '../../reducers/pseudocode';
 
 const InsertionSort = ({ setTotalSequences, currentSequence }) => {
-  const totalSequencesInsertionSort = 52;
+  const totalSequencesInsertionSort = 53;
 
   useEffect(() => {
     setTotalSequences(totalSequencesInsertionSort);
@@ -19,6 +19,7 @@ const InsertionSort = ({ setTotalSequences, currentSequence }) => {
             || currentSequence === 17
             || currentSequence === 22
             || currentSequence === 39
+            || currentSequence === 53
             ) ? ' pc-current-sequence' : ''}`
           }
         >
