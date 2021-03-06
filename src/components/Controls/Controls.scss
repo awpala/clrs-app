@@ -4,7 +4,7 @@
   // width: 100%;
 
   &-panel {
-    width: 320px;
+    width: 350px;
     @include flexer($dir: row, $ai: center, $just: space-between);
   }
 
@@ -14,5 +14,19 @@
     button {
       width: 50px;
     }
+  }
+
+  &-playback {
+    width: 150px;
+    @include flexer($dir: column, $ai: center, $just: center);
+
+    &-speed {
+      text-align: center;
+      font-size: 8pt;
+    }
+  }
+
+  &-skip {
+    margin-bottom: 28px;
   }
 }

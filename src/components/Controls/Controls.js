@@ -38,22 +38,29 @@ const Controls = ({
   return (
     <div className="controls">
       <div className="controls-panel">
-        <PlaybackButton
-          isPlaying={isPlaying}
-          setToPlay={setToPlay}
-          setToPause={setToPause}
-          currentSpeed={currentSpeed}
-          setPlaybackSpeed={setPlaybackSpeed}
-          isCompleted={currentSequence === totalSequences}
-          resetPlay={resetPlay}
-        />
-        <SkipButtons
-          isPlaying={isPlaying}
-          first={() => !isPlaying ? setCurrentSequence(1) : null}
-          decrement={() => !isPlaying ? decrementCurrentSequence(currentSequence) : null}
-          increment={() => !isPlaying ? incrementCurrentSequence(currentSequence, totalSequences) : null}
-          last={() => !isPlaying ? setCurrentSequence(totalSequences) : null}
-        />
+        <div className="controls-playback">
+          <PlaybackButton
+            isPlaying={isPlaying}
+            setToPlay={setToPlay}
+            setToPause={setToPause}
+            currentSpeed={currentSpeed}
+            setPlaybackSpeed={setPlaybackSpeed}
+            isCompleted={currentSequence === totalSequences}
+            resetPlay={resetPlay}
+          />
+          <p className="controls-playback-speed">{1000 / currentSpeed} {`sequence${(1000 / currentSpeed) === 1 ? '' : 's'}/second`}</p>
+        </div>
+        <div className="controls-skip">
+          <SkipButtons
+            isPlaying={isPlaying}
+            totalSequences={totalSequences}
+            currentSequence={currentSequence}
+            first={() => (!isPlaying && currentSequence > 1) ? setCurrentSequence(1) : null}
+            decrement={() => (!isPlaying && currentSequence > 1) ? decrementCurrentSequence(currentSequence) : null}
+            increment={() => (!isPlaying && currentSequence < totalSequences) ? incrementCurrentSequence(currentSequence, totalSequences) : null}
+            last={() => (!isPlaying && currentSequence < totalSequences) ? setCurrentSequence(totalSequences) : null}
+          />
+        </div>
       </div>
     </div>
   );
