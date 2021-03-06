@@ -17,7 +17,7 @@ const MemoryInsertionSort = ({
             var5: `key = ${vars.key}`,
           }}
           dataStructures={{
-            ds2: `A: [${dataStructures.A}], A.length = ${dataStructures.A.length}`,
+            ds2: `*A: [${dataStructures.A}], *A.length = ${dataStructures.A.length}`,
           }}
           isCurrentStackFrame={currentStackFrame === 1}
           currentStackFrameColor={currentStackFrameColor}

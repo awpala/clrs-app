@@ -34,7 +34,7 @@ const DiagramInsertionSort = ({
   return (
     <div className="diagram-insertion-sort">
       <div className="array">
-        <p className="array-name">A</p>
+        <p className="array-name">*A</p>
         <SortArray
           A={InsertionSortStates[currentSequence].A}
           isOutOfBoundsZero

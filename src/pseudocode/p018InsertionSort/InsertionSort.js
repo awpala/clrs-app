@@ -20,7 +20,7 @@ const InsertionSort = ({ setTotalSequences, currentSequence }) => {
             ) ? ' pc-current-sequence' : ''}`
           }
         >
-          <span className="pc-keyword">for</span> <span className="pc-variable">j</span> = 2 <span className="pc-keyword">to</span> A.length
+          <span className="pc-keyword">for</span> <span className="pc-variable">j</span> = 2 <span className="pc-keyword">to</span> *A.<span className="pc-variable">length</span>
         </p>
           <p
             className={`pc-level1${(
@@ -32,10 +32,10 @@ const InsertionSort = ({ setTotalSequences, currentSequence }) => {
               ) ? ' pc-current-sequence' : ''}`
             }
           >
-            <span className="pc-variable">key</span> = A[j]
+            <span className="pc-variable">key</span> = *A[<span className="pc-variable">j</span>]
           </p>
           <p className="pc-level1">
-            <span className="pc-comment">{'// Insert A[j] into the sorted sequence A[1..j - 1].'}</span>
+            <span className="pc-comment">{'//'} Insert *A[<span className="pc-variable">j</span>] into the sorted sequence *A[1..<span className="pc-variable">j</span> - 1].</span>
           </p>
           <p
             className={`pc-level1${(
@@ -59,7 +59,7 @@ const InsertionSort = ({ setTotalSequences, currentSequence }) => {
               ) ? ' pc-current-sequence' : ''}`
             }
           >
-            <span className="pc-keyword">while</span> <span className="pc-variable">i</span> {'>'} 0 <span className="pc-keyword">and</span> A[<span className="pc-variable">i</span>] {'>'} <span className="pc-variable">key</span>
+            <span className="pc-keyword">while</span> <span className="pc-variable">i</span> {'>'} 0 <span className="pc-keyword">and</span> *A[<span className="pc-variable">i</span>] {'>'} <span className="pc-variable">key</span>
           </p>
             <p
               className={`pc-level2${(
@@ -70,7 +70,7 @@ const InsertionSort = ({ setTotalSequences, currentSequence }) => {
                 ) ? ' pc-current-sequence' : ''}`
               }
             >
-              A[<span className="pc-variable">i</span> + 1] = A[<span className="pc-variable">i</span>]
+              *A[<span className="pc-variable">i</span> + 1] = *A[<span className="pc-variable">i</span>]
             </p>
             <p
               className={`pc-level2${(
@@ -93,7 +93,7 @@ const InsertionSort = ({ setTotalSequences, currentSequence }) => {
               ) ? ' pc-current-sequence' : ''}`
             }
           >
-            A[<span className="pc-variable">i</span> + 1] = <span className="pc-variable">key</span>
+            *A[<span className="pc-variable">i</span> + 1] = <span className="pc-variable">key</span>
           </p>
     </div>
   );
