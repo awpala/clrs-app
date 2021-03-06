@@ -1,8 +1,11 @@
 @import "../../styles/mixins";
 
 .controls {
-  // width: 100%;
-
+  .dummy {
+    color: white;
+    font-size: 0.5pt;
+  }
+  
   &-panel {
     width: 350px;
     @include flexer($dir: row, $ai: center, $just: space-between);
