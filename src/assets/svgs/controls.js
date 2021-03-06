@@ -99,3 +99,36 @@ export const PlaybackButton = ({
     </g>
   </svg>
 );
+
+export const SkipButtons = ({
+  isPlaying = false,
+  first,
+  decrement,
+  increment,
+  last,
+}) => (
+  <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" width="201px" height="30px" viewBox="-0.5 -0.5 201 30" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+    <g>
+      <g onClick={() => first()}>
+        <rect x="0" y="0" width="50" height="28" fill="none" stroke={!isPlaying ? black : gray}  pointerEvents="all"/>
+        <rect x="14" y="5.5" width="4" height="17" fill={!isPlaying ? black : gray}  stroke={!isPlaying ? black : gray}  pointerEvents="all"/>
+        <path d="M 27 5.5 L 37 14 L 27 22.5 Z" fill={!isPlaying ? black : gray}  stroke={!isPlaying ? black : gray}  strokeMiterlimit="10" transform="rotate(180,32,14)" pointerEvents="all"/>
+      </g>
+      <g onClick={() => decrement()}>
+        <rect x="50" y="0" width="50" height="28" fill="none" stroke={!isPlaying ? black : gray}  pointerEvents="all"/>
+        <path d="M 62 5.5 L 72 14 L 62 22.5 Z" fill={!isPlaying ? black : gray}  stroke={!isPlaying ? black : gray}  strokeMiterlimit="10" transform="rotate(180,67,14)" pointerEvents="all"/>
+        <path d="M 80 5.5 L 90 14 L 80 22.5 Z" fill={!isPlaying ? black : gray}  stroke={!isPlaying ? black : gray}  strokeMiterlimit="10" transform="rotate(180,85,14)" pointerEvents="all"/>
+      </g>
+      <g onClick={() => increment()}>
+        <rect x="100" y="0" width="50" height="28" fill="none" stroke={!isPlaying ? black : gray}  pointerEvents="all"/>
+        <path d="M 112 5.5 L 122 14 L 112 22.5 Z" fill={!isPlaying ? black : gray}  stroke={!isPlaying ? black : gray}  strokeMiterlimit="10" pointerEvents="all"/>
+        <path d="M 130 5.5 L 140 14 L 130 22.5 Z" fill={!isPlaying ? black : gray}  stroke={!isPlaying ? black : gray}  strokeMiterlimit="10" pointerEvents="all"/>
+      </g>
+      <g onClick={() => last()}>
+        <rect x="150" y="0" width="50" height="28" fill="none" stroke={!isPlaying ? black : gray}  pointerEvents="all"/>
+        <path d="M 164 5.5 L 174 14 L 164 22.5 Z" fill={!isPlaying ? black : gray}  stroke={!isPlaying ? black : gray}  strokeMiterlimit="10" pointerEvents="all"/>
+        <rect x="183" y="5.5" width="4" height="17" fill={!isPlaying ? black : gray}  stroke={!isPlaying ? black : gray}  pointerEvents="all"/>
+      </g>
+    </g>
+  </svg>
+);

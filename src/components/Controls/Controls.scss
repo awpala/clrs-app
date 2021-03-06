@@ -1,6 +1,8 @@
 @import "../../styles/mixins";
 
 .controls {
+  // width: 100%;
+
   &-panel {
     width: 320px;
     @include flexer($dir: row, $ai: center, $just: space-between);

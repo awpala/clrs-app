@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { PlaybackButton } from '../../assets/svgs/controls';
+import { PlaybackButton, SkipButtons } from '../../assets/svgs/controls';
 import './Controls.scss';
 
 const Controls = ({
@@ -47,12 +47,13 @@ const Controls = ({
           isCompleted={currentSequence === totalSequences}
           resetPlay={resetPlay}
         />
-        <div className="controls-buttons">
-          <button onClick={() => setCurrentSequence(1)}>First</button>
-          <button onClick={() => decrementCurrentSequence(currentSequence)}>-</button>
-          <button onClick={() => incrementCurrentSequence(currentSequence, totalSequences)}>+</button>
-          <button onClick={() => setCurrentSequence(totalSequences)}>Last</button>
-        </div>
+        <SkipButtons
+          isPlaying={isPlaying}
+          first={() => !isPlaying ? setCurrentSequence(1) : null}
+          decrement={() => !isPlaying ? decrementCurrentSequence(currentSequence) : null}
+          increment={() => !isPlaying ? incrementCurrentSequence(currentSequence, totalSequences) : null}
+          last={() => !isPlaying ? setCurrentSequence(totalSequences) : null}
+        />
       </div>
     </div>
   );
