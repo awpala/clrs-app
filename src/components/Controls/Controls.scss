@@ -1,11 +1,11 @@
-@import "../../styles/mixins";
+@import "../../styles";
 
 .controls {
   .dummy {
     color: white;
     font-size: 0.5pt;
   }
-  
+
   &-panel {
     width: 350px;
     @include flexer($dir: row, $ai: center, $just: space-between);
@@ -26,6 +26,14 @@
     &-speed {
       text-align: center;
       font-size: 8pt;
+    }
+
+    .active {
+      color: $black;
+    }
+  
+    .inactive {
+      color: $gray;
     }
   }
 
