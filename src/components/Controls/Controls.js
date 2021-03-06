@@ -48,6 +48,7 @@ const Controls = ({
             isCompleted={currentSequence === totalSequences}
             resetPlay={resetPlay}
           />
+          <div className="dummy">dummy</div> {/* workaround to prevent highlighting within div `controls-playback-speed` due to rapid-succession clicks of playback button */}
           <p className={`controls-playback-speed ${isPlaying ? 'active' : 'inactive'}`}>{1000 / currentSpeed} {`sequence${(1000 / currentSpeed) === 1 ? '' : 's'}/second`}</p>
           <div className="dummy">dummy</div> {/* workaround to prevent highlighting within div `controls-playback` due to rapid-succession clicks of skip buttons */}
         </div>
