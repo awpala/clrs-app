@@ -8,6 +8,7 @@ const SortArray = ({
   aboveContent,
   belowValue,
   belowContent,
+  currentStackFrameColor,
 }) => (
   <div className="sort-array">
     {isOutOfBoundsZero
@@ -15,8 +16,9 @@ const SortArray = ({
         <div className="sort-array-element">
           <SortArrayElement
             isOutOfBoundsZero
-            below={(belowValue === 0) ? belowContent : null}
             arrayIndex={0}
+            below={(belowValue === 0) ? belowContent : null}
+            currentStackFrameColor={currentStackFrameColor}
           />
         </div>
       ): null
@@ -31,6 +33,7 @@ const SortArray = ({
             value={element}
             above={(index + 1 === aboveValue) ? aboveContent : null}
             below={(index + 1 === belowValue) ? belowContent : null}
+            currentStackFrameColor={currentStackFrameColor}
           />
         </div>
       )
