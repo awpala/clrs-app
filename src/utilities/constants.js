@@ -1,5 +1,7 @@
 // pseudocode
 export const NIL = 'NIL';
+export const POS_INF = '\u221E'; // ∞
+export const NEG_INF = '-\u221E'; // -∞
 
 // colors
 export const black = 'black';
