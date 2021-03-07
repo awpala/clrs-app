@@ -20,15 +20,17 @@ const Controls = ({
     if (isPlaying && (currentSequence < totalSequences)) {
       setTimeout(() => {
         incrementCurrentSequence(currentSequence, totalSequences);
-      }, currentSpeed)
+      }, currentSpeed);
     }
-  }, [isPlaying, currentSpeed, currentSequence, totalSequences, incrementCurrentSequence])
+  // eslint-disable-next-line 
+  }, [isPlaying, currentSequence, totalSequences]);
   
   useEffect(() => {
     if (currentSequence === totalSequences) {
       setToPause();
     }
-  }, [currentSequence, totalSequences, setToPause])
+  // eslint-disable-next-line 
+  }, [currentSequence, totalSequences]);
 
   const resetPlay = () => {
     if (currentSequence === totalSequences) {
@@ -73,9 +75,9 @@ const Controls = ({
   const keyAdd = useKeyPress(keyPresses.ADD);
   const keySubtract = useKeyPress(keyPresses.SUBTRACT);
 
-  const playbackSpeeds = [ _01, _05, _1, _5, _10, _50, _100 ];
-
   useEffect(() => {
+    const playbackSpeeds = [ _01, _05, _1, _5, _10, _50, _100 ];
+
     if (keyA || keyTwo) {
       if (currentSequence >= 1) {
         setToPause();
