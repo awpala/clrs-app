@@ -11,7 +11,7 @@ export const purple = 'purple';
 export const orange = 'orange';
 
 // playback speeds (sequences/second)
-const sec = 1000;
+export const sec = 1000; // 1000 ms/secon
 export const _01 = sec / 0.1;
 export const _05 = sec / 0.5;
 export const _1 = sec / 1;
