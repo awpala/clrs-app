@@ -7,21 +7,48 @@ const MemoryInsertionSort = ({
   currentStackFrame,
   currentStackFrameColor,
 }) => (
-  <div className="memory-model">
+  <div className="memory-model-insertion-sort">
     {(vars && dataStructures)
       ? (
-        <StackFrame
-          vars={{
-            var1: `i = ${vars.i}`,
-            var3: `j = ${vars.j}`,
-            var5: `key = ${vars.key}`,
-          }}
-          dataStructures={{
-            ds2: `*A: [${dataStructures.A}], *A.length = ${dataStructures.A.length}`,
-          }}
-          isCurrentStackFrame={currentStackFrame === 1}
-          currentStackFrameColor={currentStackFrameColor}
-        />
+        <div className="memory-model-insertion-sort-sf0">
+          <StackFrame
+            dataStructures={{
+                ds1: {
+                  ds1: '*A',
+                  ds1Val: `[${dataStructures.A}]`,
+                  ds1Attr2: `length = ${dataStructures.A.length}`
+                },
+                ds2: {}
+              }
+            }
+            vars={{}}
+            fn={{
+              fn: 'I-S',
+              arg1Val: '*A',
+            }}
+          />
+        </div>
+      ) : null
+    }
+    {(vars && dataStructures)
+      ? (
+        <div className="memory-model-insertion-sort-sf1">
+          <StackFrame
+            currentStackFrame={currentStackFrame}
+            isCurrentStackFrame={currentStackFrame === 1}
+            currentStackFrameColor={currentStackFrameColor}
+            dataStructures={{
+              ds1: {},
+              ds2: {},
+            }}
+            vars={{
+              var1: `i = ${vars.i}`,
+              var2: `j = ${vars.j}`,
+              var3: `key = ${vars.key}`,
+            }}
+            fn={{}}
+          />
+        </div>
       )
       : null    
     }
