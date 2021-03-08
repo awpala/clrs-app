@@ -1,6 +1,6 @@
 import { NIL, POS_INF } from '../utilities/constants';
 
-export const totalSequencesMergeSort = null;
+export const totalSequencesMergeSort = 184;
 
 export const MergeSortStates = {
   1: {
