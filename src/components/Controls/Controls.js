@@ -18,9 +18,11 @@ const Controls = ({
 }) => {
   useEffect(() => {
     if (isPlaying && (currentSequence < totalSequences)) {
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         incrementCurrentSequence(currentSequence, totalSequences);
       }, currentSpeed);
+      
+      return () => clearTimeout(timer);
     }
   // eslint-disable-next-line 
   }, [isPlaying, currentSequence, totalSequences]);
@@ -42,63 +44,69 @@ const Controls = ({
   // keyboard shortcuts
   const keyPresses = {
     // skip to beginning
-    A: 'a',
-    FOUR: '4',
+    a: useKeyPress('a'),
+    A: useKeyPress('A'),
+    Four: useKeyPress('4'),
     // decrement sequence
-    S: 's',
-    TWO: '2',
+    s: useKeyPress('s'),
+    S: useKeyPress('S'),
+    Two: useKeyPress('2'),
     // increment sequence
-    D: 'd',
-    EIGHT: '8',
+    d: useKeyPress('d'),
+    D: useKeyPress('D'),
+    Eight: useKeyPress('8'),
     // skip to end
-    F: 'f',
-    SIX: '6',
+    f: useKeyPress('f'),
+    F: useKeyPress('F'),
+    Six: useKeyPress('6'),
     // play/pause/restart
-    W: 'w',
-    ZERO: '0',
+    w: useKeyPress('w'),
+    W: useKeyPress('W'),
+    Zero: useKeyPress('0'),
     // decrease playback speed
-    SUBTRACT: '-',
+    q: useKeyPress('q'),
+    Q: useKeyPress('Q'),
+    Subtract: useKeyPress('-'),
     // increase playback speed
-    ADD: '+',
-  };
-  
-  const keyA = useKeyPress(keyPresses.A);
-  const keyTwo = useKeyPress(keyPresses.TWO);
-  const keyS = useKeyPress(keyPresses.S);
-  const keyFour = useKeyPress(keyPresses.FOUR);
-  const keyD = useKeyPress(keyPresses.D);
-  const keySix = useKeyPress(keyPresses.SIX);
-  const keyF = useKeyPress(keyPresses.F);
-  const keyEight = useKeyPress(keyPresses.EIGHT);
-  const keyW = useKeyPress(keyPresses.W);
-  const keyZero = useKeyPress(keyPresses.ZERO);
-  const keyAdd = useKeyPress(keyPresses.ADD);
-  const keySubtract = useKeyPress(keyPresses.SUBTRACT);
+    e: useKeyPress('e'),
+    E: useKeyPress('E'),
+    Add: useKeyPress('+'),
+  }
+
+  const {
+    a, A, Four,
+    s, S, Two,
+    d, D, Eight,
+    f, F, Six,
+    w, W, Zero,
+    q, Q, Subtract,
+    e, E, Add,
+  } = keyPresses;
 
   useEffect(() => {
     const playbackSpeeds = [ _01, _05, _1, _5, _10, _50, _100 ];
 
-    if (keyA || keyTwo) {
+    if (a || A || Two) {
       if (currentSequence >= 1) {
         setToPause();
         setCurrentSequence(1);
       }
-    } else if (keyS || keyFour) {
+    } else if (s || S || Four) {
       if (currentSequence > 1) {
         setToPause();
         setCurrentSequence(currentSequence - 1);
       }
-    } else if (keyD || keySix) {
+    } else if (d || D || Six) {
       if (currentSequence < totalSequences) {
         setToPause();
         setCurrentSequence(currentSequence + 1);
       }
-    } else if (keyF || keyEight) {
+    } else if (f || F || Eight) {
       if (currentSequence <= totalSequences) {
         setToPause();
         setCurrentSequence(totalSequences);
       }
-    } else if (keyW || keyZero) {
+    } else if (w || W || Zero) {
       if (isPlaying && (currentSequence < totalSequences)) {
         setToPause();
       } else if (!isPlaying && (currentSequence < totalSequences)) {
@@ -106,26 +114,26 @@ const Controls = ({
       } else if (!isPlaying && (currentSequence === totalSequences)) {
         resetPlay();
       }
-    } else if (keySubtract) {
-      if (!isPlaying && currentSpeed < _01) {
+    } else if (q || Q || Subtract) {
+      if (currentSpeed < _01) {
         const currentSpeedIndex = playbackSpeeds.findIndex(speed => speed === currentSpeed);
         setPlaybackSpeed(playbackSpeeds[currentSpeedIndex - 1]);
       }
-    } else if (keyAdd) {
-      if (!isPlaying && currentSpeed > _100) {
+    } else if (e || E || Add) {
+      if (currentSpeed > _100) {
         const currentSpeedIndex = playbackSpeeds.findIndex(speed => speed === currentSpeed);
         setPlaybackSpeed(playbackSpeeds[currentSpeedIndex + 1]);
       }
     }
   // eslint-disable-next-line 
   }, [
-    keyA, keyTwo,
-    keyS, keyFour,
-    keyD, keySix,
-    keyF, keyEight,
-    keyW, keyZero,
-    keyAdd,
-    keySubtract,
+    a, A, Four,
+    s, S, Two,
+    d, D, Eight,
+    f, F, Six,
+    w, W, Zero,
+    q, Q, Subtract,
+    e, E, Add,
   ]);
 
   return (
@@ -152,10 +160,10 @@ const Controls = ({
             isPlaying={isPlaying}
             totalSequences={totalSequences}
             currentSequence={currentSequence}
-            first={() => (!isPlaying && currentSequence > 1) ? setCurrentSequence(1) : null}
-            decrement={() => (!isPlaying && currentSequence > 1) ? decrementCurrentSequence(currentSequence) : null}
-            increment={() => (!isPlaying && currentSequence < totalSequences) ? incrementCurrentSequence(currentSequence, totalSequences) : null}
-            last={() => (!isPlaying && currentSequence < totalSequences) ? setCurrentSequence(totalSequences) : null}
+            first={() => (currentSequence > 1) ? setCurrentSequence(1) : null}
+            decrement={() => (currentSequence > 1) ? decrementCurrentSequence(currentSequence) : null}
+            increment={() => (currentSequence < totalSequences) ? incrementCurrentSequence(currentSequence, totalSequences) : null}
+            last={() => (currentSequence < totalSequences) ? setCurrentSequence(totalSequences) : null}
           />
         </div>
       </div>
