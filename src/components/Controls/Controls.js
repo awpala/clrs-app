@@ -71,7 +71,7 @@ const Controls = ({
     e: useKeyPress('e'),
     E: useKeyPress('E'),
     Add: useKeyPress('+'),
-  }
+  };
 
   const {
     a, A, Four,
