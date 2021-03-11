@@ -34,6 +34,7 @@ export const StackFrame = ({
   },
   fn: {
     fn = null,
+    fnColor = black,
     arg1Val = null,
     arg2Val = null,
     arg3Val = null,
@@ -59,59 +60,55 @@ export const StackFrame = ({
               <text x="165" y="14" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">Data Structure Objects</text>
             </g>
           </g>
-          {ds1
-            ? (
-              <g>
-                <rect x="150" y="20" width="30" height="10" fill="none" stroke="none" pointerEvents="all"/>
-                <g transform="translate(-0.5 -0.5)">
-                  <text x="165" y="29" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds1}</text>
-                </g>
-                <rect x="90" y="31" width="150" height="39" fill="none" stroke={black} pointerEvents="all"/>
-                <rect x="120" y="40" width="30" height="20" fill="none" stroke="none" pointerEvents="all"/>
-                <g transform="translate(-0.5 -0.5)">
-                  <text x="135" y="54" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds1Val}</text>
-                </g>
-                <rect x="180" y="31" width="46" height="10" fill="none" stroke="none" pointerEvents="all"/>
-                <g transform="translate(-0.5 -0.5)">
-                  <text x="203" y="40" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds1Attr1}</text>
-                </g>
-                <rect x="180" y="45" width="46" height="10" fill="none" stroke="none" pointerEvents="all"/>
-                <g transform="translate(-0.5 -0.5)">
-                  <text x="203" y="54" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds1Attr2}</text>
-                </g>
-                <rect x="180" y="58" width="46" height="10" fill="none" stroke="none" pointerEvents="all"/>
-                <g transform="translate(-0.5 -0.5)">
-                  <text x="203" y="67" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds1Attr3}</text>
-                </g>
+          {ds1 &&
+            (<g>
+              <rect x="150" y="20" width="30" height="10" fill="none" stroke="none" pointerEvents="all"/>
+              <g transform="translate(-0.5 -0.5)">
+                <text x="165" y="29" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds1}</text>
               </g>
-            ) : null
+              <rect x="90" y="31" width="150" height="39" fill="none" stroke={black} pointerEvents="all"/>
+              <rect x="120" y="40" width="30" height="20" fill="none" stroke="none" pointerEvents="all"/>
+              <g transform="translate(-0.5 -0.5)">
+                <text x="135" y="54" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds1Val}</text>
+              </g>
+              <rect x="180" y="31" width="46" height="10" fill="none" stroke="none" pointerEvents="all"/>
+              <g transform="translate(-0.5 -0.5)">
+                <text x="203" y="40" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds1Attr1}</text>
+              </g>
+              <rect x="180" y="45" width="46" height="10" fill="none" stroke="none" pointerEvents="all"/>
+              <g transform="translate(-0.5 -0.5)">
+                <text x="203" y="54" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds1Attr2}</text>
+              </g>
+              <rect x="180" y="58" width="46" height="10" fill="none" stroke="none" pointerEvents="all"/>
+              <g transform="translate(-0.5 -0.5)">
+                <text x="203" y="67" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds1Attr3}</text>
+              </g>
+            </g>)
           }
-          {ds2
-            ? (
-              <g>
-                <rect x="150" y="76" width="30" height="10" fill="none" stroke="none" pointerEvents="all"/>
-                <g transform="translate(-0.5 -0.5)">
-                  <text x="165" y="85" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds2}</text>
-                </g>
-                <rect x="90" y="87" width="150" height="39" fill="none" stroke={black} pointerEvents="all"/>
-                <rect x="120" y="96" width="30" height="20" fill="none" stroke="none" pointerEvents="all"/>
-                <g transform="translate(-0.5 -0.5)">
-                  <text x="135" y="110" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds2Val}</text>
-                </g>
-                <rect x="180" y="87" width="46" height="10" fill="none" stroke="none" pointerEvents="all"/>
-                <g transform="translate(-0.5 -0.5)">
-                  <text x="203" y="96" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds2Attr1}</text>
-                </g>
-                <rect x="180" y="101" width="46" height="10" fill="none" stroke="none" pointerEvents="all"/>
-                <g transform="translate(-0.5 -0.5)">
-                  <text x="203" y="110" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds2Attr2}</text>
-                </g>
-                <rect x="180" y="114" width="46" height="10" fill="none" stroke="none" pointerEvents="all"/>
-                <g transform="translate(-0.5 -0.5)">
-                  <text x="203" y="123" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds2Attr3}</text>
-                </g>
-            </g>
-            ) : null
+          {ds2 &&
+            (<g>
+              <rect x="150" y="76" width="30" height="10" fill="none" stroke="none" pointerEvents="all"/>
+              <g transform="translate(-0.5 -0.5)">
+                <text x="165" y="85" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds2}</text>
+              </g>
+              <rect x="90" y="87" width="150" height="39" fill="none" stroke={black} pointerEvents="all"/>
+              <rect x="120" y="96" width="30" height="20" fill="none" stroke="none" pointerEvents="all"/>
+              <g transform="translate(-0.5 -0.5)">
+                <text x="135" y="110" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds2Val}</text>
+              </g>
+              <rect x="180" y="87" width="46" height="10" fill="none" stroke="none" pointerEvents="all"/>
+              <g transform="translate(-0.5 -0.5)">
+                <text x="203" y="96" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds2Attr1}</text>
+              </g>
+              <rect x="180" y="101" width="46" height="10" fill="none" stroke="none" pointerEvents="all"/>
+              <g transform="translate(-0.5 -0.5)">
+                <text x="203" y="110" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds2Attr2}</text>
+              </g>
+              <rect x="180" y="114" width="46" height="10" fill="none" stroke="none" pointerEvents="all"/>
+              <g transform="translate(-0.5 -0.5)">
+                <text x="203" y="123" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{ds2Attr3}</text>
+              </g>
+            </g>)
           }
         </g>
         <g>
@@ -122,7 +119,7 @@ export const StackFrame = ({
             </g>
           </g>
           <g>
-          <rect x="289" y="20" width="30" height="14" fill="none" stroke="none" pointerEvents="all"/>
+            <rect x="289" y="20" width="30" height="14" fill="none" stroke="none" pointerEvents="all"/>
             <g transform="translate(-0.5 -0.5)">
               <text x="304" y="30" fill={black} fontFamily="Helvetica" fontSize="9px" textAnchor="middle">{var1 ? var1 : null}</text>
             </g>
@@ -167,48 +164,44 @@ export const StackFrame = ({
               <text x="345" y="80" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">Function Call</text>
             </g>
           </g>
-          {fn
-            ? (
+          {fn &&
+            (<g>
               <g>
-                <g>
-                  <rect x="260" y="93" width="25" height="20" fill="none" stroke="none" pointerEvents="all"/>
-                  <g transform="translate(-0.5 -0.5)">
-                    <text x="273" y="107" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{fn}</text>
-                  </g>
+                <rect x="260" y="93" width="25" height="20" fill="none" stroke="none" pointerEvents="all"/>
+                <g transform="translate(-0.5 -0.5)">
+                  <text x="273" y="107" fill={fnColor} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{fn}</text>
                 </g>
+              </g>
+              <g>
+                <rect x="290" y="86" width="130" height="34" fill="none" stroke={black} pointerEvents="all"/>
                 <g>
-                  <rect x="290" y="86" width="130" height="34" fill="none" stroke={black} pointerEvents="all"/>
-                  <g>
-                    <rect x="304" y="87" width="46" height="13" fill="none" stroke="none" pointerEvents="all"/>
-                    <g transform="translate(-0.5 -0.5)">
-                      <text x="327" y="97" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{arg1Val ? `arg1: ${arg1Val}` : null}</text>
-                    </g>
-                    <rect x="360" y="87" width="46" height="13" fill="none" stroke="none" pointerEvents="all"/>
-                    <g transform="translate(-0.5 -0.5)">
-                      <text x="383" y="97" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{arg2Val ? `arg2: ${arg2Val}` : null}</text>
-                    </g>
-                    <rect x="304" y="104" width="46" height="13" fill="none" stroke="none" pointerEvents="all"/>
-                    <g transform="translate(-0.5 -0.5)">
-                      <text x="327" y="114" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{arg3Val ? `arg3: ${arg3Val}` : null}</text>
-                    </g>
-                    <rect x="360" y="104" width="46" height="13" fill="none" stroke="none" pointerEvents="all"/>
-                    <g transform="translate(-0.5 -0.5)">
-                      <text x="383" y="114" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{arg4Val ? `arg4: ${arg4Val}` : null}</text>
-                    </g>
+                  <rect x="304" y="87" width="46" height="13" fill="none" stroke="none" pointerEvents="all"/>
+                  <g transform="translate(-0.5 -0.5)">
+                    <text x="327" y="97" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{arg1Val ? `arg1: ${arg1Val}` : null}</text>
+                  </g>
+                  <rect x="360" y="87" width="46" height="13" fill="none" stroke="none" pointerEvents="all"/>
+                  <g transform="translate(-0.5 -0.5)">
+                    <text x="383" y="97" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{arg2Val ? `arg2: ${arg2Val}` : null}</text>
+                  </g>
+                  <rect x="304" y="104" width="46" height="13" fill="none" stroke="none" pointerEvents="all"/>
+                  <g transform="translate(-0.5 -0.5)">
+                    <text x="327" y="114" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{arg3Val ? `arg3: ${arg3Val}` : null}</text>
+                  </g>
+                  <rect x="360" y="104" width="46" height="13" fill="none" stroke="none" pointerEvents="all"/>
+                  <g transform="translate(-0.5 -0.5)">
+                    <text x="383" y="114" fill={black} fontFamily="Helvetica" fontSize="12px" textAnchor="middle">{arg4Val ? `arg4: ${arg4Val}` : null}</text>
                   </g>
                 </g>
               </g>
-            ) : null
+            </g>)
           }
         </g>
       </g>
-      {isCurrentStackFrame
-        ? (
-          <g>
-            <path d="M 519.59 60.16 L 519.42 70.16 L 509.96 70 L 465.91 70 L 465.91 78.52 L 440.5 65 L 465.91 51.48 L 465.91 60 L 509.96 60 Q 510.04 60 510.13 60 Z" fill={currentStackFrameColor} stroke={black} strokeLinejoin="round" strokeMiterlimit="10" pointerEvents="all"/>
-            <path d="M 465.91 70 L 465.91 78.52 L 440.5 65 L 465.91 51.48 L 465.91 60" fill={currentStackFrameColor} stroke={black} strokeLinejoin="flat" strokeMiterlimit="4" pointerEvents="all"/>
-          </g>
-        ) : null
+      {isCurrentStackFrame &&
+        (<g>
+          <path d="M 519.59 60.16 L 519.42 70.16 L 509.96 70 L 465.91 70 L 465.91 78.52 L 440.5 65 L 465.91 51.48 L 465.91 60 L 509.96 60 Q 510.04 60 510.13 60 Z" fill={currentStackFrameColor} stroke={black} strokeLinejoin="round" strokeMiterlimit="10" pointerEvents="all"/>
+          <path d="M 465.91 70 L 465.91 78.52 L 440.5 65 L 465.91 51.48 L 465.91 60" fill={currentStackFrameColor} stroke={black} strokeLinejoin="flat" strokeMiterlimit="4" pointerEvents="all"/>
+        </g>)
       }
     </g>
   </svg>

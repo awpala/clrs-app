@@ -24,6 +24,7 @@ const MemoryInsertionSort = ({
             vars={{}}
             fn={{
               fn: 'I-S',
+              fnColor: currentStackFrameColor,
               arg1Val: '*A',
             }}
           />
