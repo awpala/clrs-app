@@ -42,9 +42,9 @@ const MemoryInsertionSort = ({
               ds2: {},
             }}
             vars={{
-              var1: `i = ${vars.i}`,
-              var2: `j = ${vars.j}`,
-              var3: `key = ${vars.key}`,
+              var4: `i = ${vars.i}`,
+              var5: `j = ${vars.j}`,
+              var6: `key = ${vars.key}`,
             }}
             fn={{}}
           />
