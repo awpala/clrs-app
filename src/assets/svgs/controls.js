@@ -1,5 +1,5 @@
 import React from 'react';
-import { black, gray, _01, _05, _1, _5, _10, _50, _100 } from '../../utilities/constants';
+import { black, gray, white, _01, _05, _1, _5, _10, _50, _100 } from '../../utilities/constants';
 
 export const PlaybackButton = ({
   isPlaying = false,
@@ -10,7 +10,7 @@ export const PlaybackButton = ({
   isCompleted,
   resetPlay,
 }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" width="87px" height="78px" viewBox="-0.5 -0.5 87 78" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" width="87px" height="78px" viewBox="-0.5 -0.5 87 78" style={{ backgroundColor: white }}>
     <g>
       <ellipse cx="45" cy="40" rx="25" ry="25" fill="none" stroke={black} pointerEvents="all"/>
 
@@ -109,7 +109,7 @@ export const SkipButtons = ({
   increment,
   last,
 }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" width="201px" height="30px" viewBox="-0.5 -0.5 201 30" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" width="201px" height="30px" viewBox="-0.5 -0.5 201 30" style={{ backgroundColor: white }}>
     <g>
       <g onClick={() => first()}>
         <rect x="0" y="0" width="50" height="28" fill="none" stroke={(!isPlaying && currentSequence > 1) ? black : gray} pointerEvents="all"/>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { black } from '../../utilities/constants';
+import { black, white } from '../../utilities/constants';
 
 export const StackFrame = ({
   currentStackFrame = 0,
@@ -41,7 +41,7 @@ export const StackFrame = ({
     arg4Val = null,
   },
 }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" width="530px" height="132px" viewBox="-0.5 -0.5 521 132" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" width="530px" height="132px" viewBox="-0.5 -0.5 521 132" style={{ backgroundColor: white }}>
     <g>
       <g>
         <rect x="0" y="55" width="70" height="20" fill="none" stroke="none" pointerEvents="all"/>
