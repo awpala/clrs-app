@@ -55,7 +55,7 @@ export const InsertionSortStates = {
     A: [2, 5, 4, 6, 1, 3],
     i: NIL,
     j: 3,
-    key: 2,
+    key: NIL,
   },
   10: {
     A: [2, 5, 4, 6, 1, 3],
@@ -103,7 +103,7 @@ export const InsertionSortStates = {
     A: [2, 4, 5, 6, 1, 3],
     i: NIL,
     j: 4,
-    key: 4,
+    key: NIL,
   },
   18: {
     A: [2, 4, 5, 6, 1, 3],
@@ -133,7 +133,7 @@ export const InsertionSortStates = {
     A: [2, 4, 5, 6, 1, 3],
     i: NIL,
     j: 5,
-    key: 6,
+    key: NIL,
   },
   23: {
     A: [2, 4, 5, 6, 1, 3],
@@ -235,7 +235,7 @@ export const InsertionSortStates = {
     A: [1, 2, 4, 5, 6, 3],
     i: NIL,
     j: 6,
-    key: 1,
+    key: NIL,
   },
   40: {
     A: [1, 2, 4, 5, 6, 3],
@@ -319,6 +319,6 @@ export const InsertionSortStates = {
     A: [1, 2, 3, 4, 5, 6],
     i: NIL,
     j: 7,
-    key: 3,
+    key: NIL,
   },
 };
